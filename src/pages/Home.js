@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 //add email list
 //add "your cart is empty"
 //add checkout button to cart
-
+//home page doesnt load on page load??
 
 function Home(){
     const [cart, setCart] = useState([])

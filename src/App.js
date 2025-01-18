@@ -25,9 +25,9 @@ function Navbar(){
   
   return(
   <div className=" p-2 flex flex-row w-screen justify-between sticky top-0 z-50 bg-slate-100 h-14">
-    <Link to="/" className="flex justify-center items-center"><button className="hover:bg-slate-300 hover:rounded-xl "><FontAwesomeIcon icon={faHouse} className="text-3xl" /></button></Link>
-    <Link to="/" className="flex justify-center items-center"><img src={Logo} className="h-full"></img></Link>
-    <Link to="/Cart" className="flex justify-center items-center"><button className="hover:bg-slate-300 hover:rounded-xl"><p className="flex justify-center items-center absolute bg-red-500 rounded-full h-4 aspect-square top-1 right-1 text-sm font-bold text-white">{cartCount}</p><FontAwesomeIcon icon={faCartShopping} className="text-3xl" /></button></Link>
+    <Link to="/skateshop" className="flex justify-center items-center"><button className="hover:bg-slate-300 hover:rounded-xl "><FontAwesomeIcon icon={faHouse} className="text-3xl" /></button></Link>
+    <Link to="/skateshop" className="flex justify-center items-center"><img src={Logo} className="h-full"></img></Link>
+    <Link to="/skateshop/cart" className="flex justify-center items-center"><button className="hover:bg-slate-300 hover:rounded-xl"><p className="flex justify-center items-center absolute bg-red-500 rounded-full h-4 aspect-square top-1 right-1 text-sm font-bold text-white">{cartCount}</p><FontAwesomeIcon icon={faCartShopping} className="text-3xl" /></button></Link>
   </div>
   )
   }
@@ -36,8 +36,8 @@ function Navbar(){
     <>
         <Navbar/>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="Cart" element={<Cart />} />
+          <Route path="/skateshop" element={<Home />} />
+          <Route path="/skateshop/cart" element={<Cart />} />
         </Routes>
       
     </>
