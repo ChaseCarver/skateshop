@@ -28,7 +28,8 @@ function Cart(){
     return(
     <>
         <h1 className="flex justify-center items-center text-4xl">Cart</h1>
-        {cart.map((product, id) => 
+        {(cart.length) == 0 ? <p>Cart is empty, start shopping!</p>:
+        cart.map((product, id) => 
         <div className="flex justify-center items-center w-screen" key={id} part={product.part}>
             <h1>{product.part}, {product.brand}, {product.name}, {product.price} &nbsp;</h1>
             <img src={""} className=""></img>
