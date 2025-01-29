@@ -22,10 +22,10 @@ function Navbar(){
     window.addEventListener("storage", handleStorageChange);
     return () => {window.removeEventListener("storage", handleStorageChange);};
     }, [])
-  
+
   return(
     <>
-  <div className=" p-2 flex flex-row w-screen justify-between sticky top-0 z-50 bg-slate-100 h-14">
+  <div className=" p-2 flex flex-row justify-between sticky top-0 z-50 bg-slate-100 h-14">
     <div className="flex justify-center items-center"><button className="hover:bg-slate-300 hover:rounded-xl" onClick={() => {console.log("clicked")}}><FontAwesomeIcon icon={faBars} className="text-3xl" /></button></div>
     <Link to="/skateshop" className="flex justify-center items-center"><img src={Logo} className="h-full"></img></Link>
     <Link to="/skateshop/cart" className="flex justify-center items-center"><button className="hover:bg-slate-300 hover:rounded-xl"><p className="flex justify-center items-center absolute bg-red-500 rounded-full h-4 aspect-square top-1 right-1 text-sm font-bold text-white">{cartCount}</p><FontAwesomeIcon icon={faCartShopping} className="text-3xl" /></button></Link>
